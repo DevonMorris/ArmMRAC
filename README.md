@@ -52,18 +52,18 @@ The results can be seen in this [Video](https://www.youtube.com/watch?v=yhvNe5n2
 ![alt text]( "Tracking with MRAC")
 
 ## Pros
--MRAC compensates for parametric uncertainty in the system
--MRAC has the ability to change it's behavior if the dynamics of the system change
--MRAC can track a step input with zero steady-state error
+- MRAC compensates for parametric uncertainty in the system
+- MRAC has the ability to change it's behavior if the dynamics of the system change
+- MRAC can track a step input with zero steady-state error
 
 ## Cons
--The controller and adaptive gains seem to be working in opposite directions
--The conflict between the controller and adaptation produces oscillations
--Oscillations can grow without bound
--Can be difficult to tune
+- The controller and adaptive gains seem to be working in opposite directions
+- The conflict between the controller and adaptation produces oscillations
+- Oscillations can grow without bound
+- Can be difficult to tune
 
 ## Implementation Cost
--Implementation of the adaptive laws is relatively straightforward and easy
--Tuning these adaptive gains is really difficult!
+- Implementation of the adaptive laws is relatively straightforward and easy
+- Tuning these adaptive gains is really difficult!
 
 Honestly, I expected a lot more out of MRAC. Maybe there is more tuning to be done.
