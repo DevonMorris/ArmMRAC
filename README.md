@@ -49,7 +49,7 @@ Where ![alt text](https://latex.codecogs.com/gif.latex?%5CGamma_x%2C%5C%20%5CGam
 
 The results can be seen in this [Video](https://www.youtube.com/watch?v=yhvNe5n2xSQ&t=2s) and in the plot below.
 
-![alt text]( "Tracking with MRAC")
+![alt text](https://raw.githubusercontent.com/DevonMorris/ArmMRAC/master/MRAC.png "Tracking with MRAC")
 
 ## Pros
 - MRAC compensates for parametric uncertainty in the system
