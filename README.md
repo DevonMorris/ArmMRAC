@@ -40,6 +40,30 @@ We also solve the Lyapunov equation given by
 ![alt text](https://latex.codecogs.com/gif.latex?PA_%7Bref%7D%20&plus;%20A_%7Bref%7D%5ETP%20%3D%20-Q "Algebraic Lyapunov Equation")
 
 And adapt our gains using the MRAC laws
+
 ![alt text](https://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20K_x%20%26%3D%20-%5CGamma_x%20xe%5ET%20PB%20%5C%5C%20K_r%20%26%3D%20-%5CGamma_r%20r%28t%29e%5ET%20PB%20%5C%5C%20%5Cbm%7B%5CTheta%7D%20%26%3D%20-%5CGamma_%7B%5Ctheta%7D%20%5Cbm%7B%5CPhi%7D%28x%29e%5ET%20PB%20%5Cend%7Baligned%7D "MRAC Laws")
 
 Where ![alt text](https://latex.codecogs.com/gif.latex?%5CGamma_x%2C%5C%20%5CGamma_r%2C%5C%20%5CGamma_%7B%5Ctheta%7D "Adaptive Gains") are the adaptive gains of the system.
+
+## Results
+
+The results can be seen in this [Video](https://www.youtube.com/watch?v=yhvNe5n2xSQ&t=2s) and in the plot below.
+
+![alt text]( "Tracking with MRAC")
+
+## Pros
+-MRAC compensates for parametric uncertainty in the system
+-MRAC has the ability to change it's behavior if the dynamics of the system change
+-MRAC can track a step input with zero steady-state error
+
+## Cons
+-The controller and adaptive gains seem to be working in opposite directions
+-The conflict between the controller and adaptation produces oscillations
+-Oscillations can grow without bound
+-Can be difficult to tune
+
+## Implementation Cost
+-Implementation of the adaptive laws is relatively straightforward and easy
+-Tuning these adaptive gains is really difficult!
+
+Honestly, I expected a lot more out of MRAC. Maybe there is more tuning to be done.
