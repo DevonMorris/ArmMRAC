@@ -41,4 +41,5 @@ We also solve the Lyapunov equation given by
 
 And adapt our gains using the MRAC laws
 ![alt text](https://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20K_x%20%26%3D%20-%5CGamma_x%20xe%5ET%20PB%20%5C%5C%20K_r%20%26%3D%20-%5CGamma_r%20r%28t%29e%5ET%20PB%20%5C%5C%20%5Cbm%7B%5CTheta%7D%20%26%3D%20-%5CGamma_%7B%5Ctheta%7D%20%5Cbm%7B%5CPhi%7D%28x%29e%5ET%20PB%20%5Cend%7Baligned%7D "MRAC Laws")
+
 Where ![alt text](https://latex.codecogs.com/gif.latex?%5CGamma_x%2C%5C%20%5CGamma_r%2C%5C%20%5CGamma_%7B%5Ctheta%7D "Adaptive Gains") are the adaptive gains of the system.
