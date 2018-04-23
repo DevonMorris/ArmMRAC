@@ -24,9 +24,9 @@ class armMRAC:
         # MRAC params
         self.Q = 1.*np.matrix([[1., 0.], [0., 1.]])
         self.P = np.matrix(ctrl.lyap(self.Aref,self.Q).T)
-        self.Gammax = np.matrix([[0.001, 0.],[0., 0.001]])
-        self.Gammar = 0.05
-        self.GammaTh = 0.001
+        self.Gammax = np.matrix([[0.1, 0.],[0., 0.0]])
+        self.Gammar = 0.1
+        self.GammaTh = 0.0
 
     def u(self, y_r, y):
         # y_r is the referenced input
@@ -80,12 +80,8 @@ class armMRAC:
         r = y_r[0]
         N = 10
         for i in range(N):
-            self.Kx += (self.Gammax*x*e.T*self.P*P.B)*P.Ts/N
+            xeT = np.matrix([[x[0,0]*e[0,0], 0.],[0., x[1,0]*e[1,0]]])
+            self.Kx += (self.Gammax*xeT*self.P*P.B)*P.Ts/N
             e[1] = 0
             self.Kr += (self.Gammar*r*e.T*self.P*P.B)*P.Ts/N
             self.Th += (self.GammaTh*self.phi(x)*e.T*self.P*P.B)*P.Ts/N
-
-        # kind of anti-windup
-        self.Kx = self.saturate(self.Kx)
-        print(self.Kr)
-

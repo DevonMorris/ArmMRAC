@@ -9,12 +9,12 @@ Ts = P.Ts  # sample rate of the controller
 beta = P.beta  # dirty derivative gain
 tau_max = P.tau_max  # limit on control signal
 m = 1.5*P.m
-ell = P.ell/1.2
+ell = P.ell/1.3
 g = P.g
 
 #  tuning parameters
 tr = 0.5
-zeta = 0.707
+zeta = 0.8
 
 # State Space Equations
 # xdot = A*x + B*u
